@@ -26,42 +26,42 @@ The system is exposed via a **FastAPI** endpoint, returning both the final answe
 ## Setup Instructions
 
 
-# 1. Fork Clone the repository
+### 1. Fork and Clone the repository
 ```
 git clone https://github.com/your-username/rag-chatbot.git
 cd rag-chatbot
 ```
 
-# 2. Create and activate a virtual environment (Windows – Git Bash)
+### 2. Create and activate a virtual environment (Windows – Git Bash)
 ```
 python -m venv venv
 source venv/Scripts/activate
 ```
 
-# 3. Install dependencies
+### 3. Install dependencies
 ```
 pip install -r requirements.txt
 ```
 
-# 4. Set environment variables
+### 4. Set environment variables
 ```
 export PINECONE_API_KEY=your_pinecone_api_key
 export GROQ_API_KEY=your_groq_api_key
 ```
 
-# 5. Ingest and index the document (run once)
+### 5. Ingest and index the document (run once)
 ```
 python script/ingest.py
 python script/index_to_pinecone.py
 ```
 
-# 6. Start the API server
+### 6. Start the API server
 ```
 uvicorn script.api:app --reload
 ```
 
-# Open Swagger UI at:
-# http://127.0.0.1:8000/docs
+## Open Swagger UI at:
+### http://127.0.0.1:8000/docs
 
 
 ## Sample Queries
