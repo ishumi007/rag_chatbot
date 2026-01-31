@@ -3,6 +3,15 @@
 
 **Retrieval-Augmented Generation (RAG) chatbot that answers questions strictly from :** [AGENTIC_AI_EBOOK](https://konverge.ai/pdf/Ebook-Agentic-AI.pdf)
   
+## Working RAG chatbot 
+
+## INPUT QUERY
+![App Screenshot](screenshot/input.png)
+
+## OUTPUT RESPONSE
+![App Screenshot](screenshot/output.png)
+
+
 ## Key Features
 
 - PDF ingestion and semantic chunking  
