@@ -31,15 +31,15 @@ def chunk_text(text: str):
 
 
 if __name__ == "__main__":
-    print("📄 Loading PDF...")
+    print(" Loading PDF...")
     raw_text = load_pdf_text(PDF_PATH)
 
-    print(f"✅ Extracted {len(raw_text)} characters")
+    print(f" Extracted {len(raw_text)} characters")
 
-    print("✂️ Chunking text...")
+    print(" Chunking text...")
     chunks = chunk_text(raw_text)
 
-    print(f"✅ Created {len(chunks)} chunks")
+    print(f" Created {len(chunks)} chunks")
 
     print("\n🔍 Sample chunk:\n")
     print(chunks[0][:500])

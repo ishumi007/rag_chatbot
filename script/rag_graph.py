@@ -15,7 +15,7 @@ LLM_MODEL = "llama-3.1-8b-instant"
 
 
 # ---------- CLIENTS ----------
-print("🔌 Initializing clients...")
+print(" Initializing clients...")
 embedding_model = SentenceTransformer(EMBEDDING_MODEL_NAME)
 pc = Pinecone()
 index = pc.Index(INDEX_NAME)
@@ -36,7 +36,7 @@ class GraphState(TypedDict):
 
 # ---------- RETRIEVER NODE ----------
 def retrieve(state: GraphState) -> GraphState:
-    print("🔍 Retrieving relevant chunks...")
+    print(" Retrieving relevant chunks...")
 
     query_embedding = embedding_model.encode(
         state["question"]
@@ -121,7 +121,7 @@ def build_graph():
 if __name__ == "__main__":
     app = build_graph()
 
-    print("\n🤖 RAG Chatbot is ready! (type 'exit' to quit)\n")
+    print("\n RAG Chatbot is ready! (type 'exit' to quit)\n")
 
     while True:
         question = input("You: ")
@@ -130,10 +130,10 @@ if __name__ == "__main__":
 
         result = app.invoke({"question": question})
 
-        print("\n🧠 Answer:\n")
+        print("\n Answer:\n")
         print(result["answer"])
 
-        print("\n📄 Retrieved Context Chunks:")
+        print("\nRetrieved Context Chunks:")
         for i, chunk in enumerate(result["context"], start=1):
             print(f"\n--- Chunk {i} (score: {chunk['score']}) ---")
             print(chunk["text"][:500], "..." if len(chunk["text"]) > 500 else "")
