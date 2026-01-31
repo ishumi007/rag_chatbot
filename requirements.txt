@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pinecone
+sentence-transformers
+langgraph
+groq
+pydantic
+pypdf
+langchain-text-splitters
